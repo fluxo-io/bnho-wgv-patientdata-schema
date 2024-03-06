@@ -1298,8 +1298,8 @@
                                 </xs:element>
                                 <xs:element minOccurs="0" name="diagnosisDate">
                                   <xs:annotation>
-                                    <xs:documentation xml:lang="de">Datenfeld: 'Diagnosedatum' - Typ:
-                                      MedicalDate</xs:documentation>
+                                    <xs:documentation xml:lang="de">Datenfeld: 'Diagnosedatum' -
+                                      Typ: MedicalDate</xs:documentation>
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
@@ -1766,9 +1766,8 @@
                     </xs:element>
                     <xs:element minOccurs="0" name="id" type="xs:string">
                       <xs:annotation>
-                        <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                          Eintrags zum Refenzieren und Reidentifzieren in
-                          zukünftigen Importen</xs:documentation>
+                        <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags zum
+                          Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0" name="deceasedDate">
@@ -1914,9 +1913,8 @@
                   <xs:sequence>
                     <xs:element minOccurs="0" name="id" type="xs:string">
                       <xs:annotation>
-                        <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                          Eintrags zum Refenzieren und Reidentifzieren in
-                          zukünftigen Importen</xs:documentation>
+                        <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags zum
+                          Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0" name="nngm-case-id" type="xs:string">
@@ -2339,7 +2337,8 @@
                       <xs:annotation>
                         <xs:documentation xml:lang="de">Instrument: 'Krankenkasse'</xs:documentation>
                       </xs:annotation>
-                      <!-- Wir würden gerne die IKNR Nuummer statt einem Krankenkassenstring senden. Ist dies möglich? -->
+                      <!-- Wir würden gerne die IKNR Nuummer statt einem Krankenkassenstring senden.
+                      Ist dies möglich? -->
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element minOccurs="0" name="name">
@@ -4083,46 +4082,49 @@
                                                     </xs:simpleType>
                                                   </xs:element>
                                                   -->
-                                                  <xs:element minOccurs="0" name="metastasesLocalisation">
+                                                  <xs:element minOccurs="0"
+                                                    name="metastasesLocalisation">
                                                     <xs:annotation>
-                                                        <xs:documentation>Datenfeld: 'Lokalisation' - Typ: Enumeration</xs:documentation>
+                                                      <xs:documentation>Datenfeld: 'Lokalisation' -
+                                                        Typ: Enumeration</xs:documentation>
                                                     </xs:annotation>
                                                     <xs:simpleType>
-                                                        <xs:restriction base="xs:string">
-                                                            <xs:enumeration value="bones">
-                                                                <xs:annotation>
-                                                                    <xs:documentation>Knochen</xs:documentation>
-                                                                </xs:annotation>
-                                                            </xs:enumeration>
-                                                            <xs:enumeration value="liver">
-                                                                <xs:annotation>
-                                                                    <xs:documentation>Leber</xs:documentation>
-                                                                </xs:annotation>
-                                                            </xs:enumeration>
-                                                            <xs:enumeration value="adrenalGland">
-                                                                <xs:annotation>
-                                                                    <xs:documentation>Nebenniere</xs:documentation>
-                                                                </xs:annotation>
-                                                            </xs:enumeration>
-                                                            <xs:enumeration value="brain">
-                                                                <xs:annotation>
-                                                                    <xs:documentation>Gehirn</xs:documentation>
-                                                                </xs:annotation>
-                                                            </xs:enumeration>
-                                                            <xs:enumeration value="pleura">
-                                                                <xs:annotation>
-                                                                    <xs:documentation>Pleura</xs:documentation>
-                                                                </xs:annotation>
-                                                            </xs:enumeration>
-                                                            <xs:enumeration value="other">
-                                                                <xs:annotation>
-                                                                    <xs:documentation>Andere</xs:documentation>
-                                                                </xs:annotation>
-                                                            </xs:enumeration>
-                                                        </xs:restriction>
+                                                      <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="bones">
+                                                          <xs:annotation>
+                                                            <xs:documentation>Knochen</xs:documentation>
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
+                                                        <xs:enumeration value="liver">
+                                                          <xs:annotation>
+                                                            <xs:documentation>Leber</xs:documentation>
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
+                                                        <xs:enumeration value="adrenalGland">
+                                                          <xs:annotation>
+                                                            <xs:documentation>Nebenniere</xs:documentation>
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
+                                                        <xs:enumeration value="brain">
+                                                          <xs:annotation>
+                                                            <xs:documentation>Gehirn</xs:documentation>
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
+                                                        <xs:enumeration value="pleura">
+                                                          <xs:annotation>
+                                                            <xs:documentation>Pleura</xs:documentation>
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
+                                                        <xs:enumeration value="other">
+                                                          <xs:annotation>
+                                                            <xs:documentation>Andere</xs:documentation>
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
+                                                      </xs:restriction>
                                                     </xs:simpleType>
-                                                </xs:element>
-                                                  <xs:element minOccurs="0" name="otherMetastasesLocalisation">
+                                                  </xs:element>
+                                                  <xs:element minOccurs="0"
+                                                    name="otherMetastasesLocalisation">
                                                     <xs:annotation>
                                                       <xs:documentation xml:lang="de">Datenfeld:
                                                         'Bitte spezifizieren Sie "Andere"' - Typ:
@@ -4776,7 +4778,8 @@
                                                 </xs:restriction>
                                               </xs:simpleType>
                                             </xs:element>
-                                            <xs:element minOccurs="0" name="growthPatternMicropapillary">
+                                            <xs:element minOccurs="0"
+                                              name="growthPatternMicropapillary">
                                               <xs:annotation>
                                                 <xs:documentation xml:lang="de">Datenfeld:
                                                   'Wachstumsmuster bei Adenokarzinom mikropapillär'
@@ -4802,7 +4805,8 @@
                                                 </xs:restriction>
                                               </xs:simpleType>
                                             </xs:element>
-                                            <xs:element minOccurs="0" name="percentSignetRingCellCarcinoma">
+                                            <xs:element minOccurs="0"
+                                              name="percentSignetRingCellCarcinoma">
                                               <xs:annotation>
                                                 <xs:documentation xml:lang="de">Datenfeld: 'Anteil
                                                   an Siegelringzellkarzinomen' - Typ: Integer</xs:documentation>
@@ -23208,9 +23212,8 @@
                   <xs:sequence>
                     <xs:element minOccurs="0" name="id" type="xs:string">
                       <xs:annotation>
-                        <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                          Eintrags zum Refenzieren und Reidentifzieren in
-                          zukünftigen Importen</xs:documentation>
+                        <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags zum
+                          Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                       </xs:annotation>
                     </xs:element>
                     <xs:element minOccurs="0" name="diginet-visit-id" type="xs:string">
@@ -25465,9 +25468,8 @@
                         <xs:sequence>
                           <xs:element minOccurs="0" name="id" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                                Eintrags zum Refenzieren und Reidentifzieren in
-                                zukünftigen Importen</xs:documentation>
+                              <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags
+                                zum Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element name="digiNetPlannedVisitPatientTransfer">
@@ -25552,9 +25554,8 @@
                         <xs:sequence>
                           <xs:element minOccurs="0" name="id" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                                Eintrags zum Refenzieren und Reidentifzieren in
-                                zukünftigen Importen</xs:documentation>
+                              <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags
+                                zum Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyChangeSinceLastDigiNetVisit">
@@ -25658,7 +25659,8 @@
                                             in zukünftigen Importen</xs:documentation>
                                         </xs:annotation>
                                       </xs:element>
-                                      <xs:element minOccurs="0" name="partiallyNotImplementedRecommendation">
+                                      <xs:element minOccurs="0"
+                                        name="partiallyNotImplementedRecommendation">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Datenfeld: 'Welche
                                             Empfehlung wurde nicht umgesetzt?' - Typ: FreeText</xs:documentation>
@@ -25756,7 +25758,8 @@
                                           </xs:restriction>
                                         </xs:simpleType>
                                       </xs:element>
-                                      <xs:element minOccurs="0" name="otherPartiallyNotImplementedReasonSpecified">
+                                      <xs:element minOccurs="0"
+                                        name="otherPartiallyNotImplementedReasonSpecified">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Datenfeld: 'Bitte
                                             spezifizieren Sie "Andere"' - Typ: FreeText</xs:documentation>
@@ -26534,7 +26537,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="therapyInitiationOtherTherapyOrMedicationSpecified">
+                          <xs:element minOccurs="0"
+                            name="therapyInitiationOtherTherapyOrMedicationSpecified">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Bitte spezifizieren Sie
                                 "Anderes"' - Typ: FreeText</xs:documentation>
@@ -26596,7 +26600,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="therapyInitiationMaintenanceTherapyPlanned">
+                          <xs:element minOccurs="0"
+                            name="therapyInitiationMaintenanceTherapyPlanned">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Erhaltungstherapie
                                 geplant' - Typ: Enumeration</xs:documentation>
@@ -26616,7 +26621,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="therapyInitiationMaintenanceTherapyOrMedication">
+                          <xs:element minOccurs="0"
+                            name="therapyInitiationMaintenanceTherapyOrMedication">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Therapieschema /
                                 Medikament der Erhaltungstherapie' - Typ: Enumeration</xs:documentation>
@@ -27377,7 +27383,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="therapyStartOtherAdditionalTherapyOrMedicationSpecified">
+                          <xs:element minOccurs="0"
+                            name="therapyStartOtherAdditionalTherapyOrMedicationSpecified">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Bitte spezifizieren Sie
                                 "Anderes"' - Typ: FreeText</xs:documentation>
@@ -28194,7 +28201,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="therapyChangeOtherNewTherapyOrMedicationSpecified">
+                          <xs:element minOccurs="0"
+                            name="therapyChangeOtherNewTherapyOrMedicationSpecified">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Bitte spezifizieren Sie
                                 "Anderes"' - Typ: FreeText</xs:documentation>
@@ -28367,7 +28375,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="interventionalTherapySinceLastDigiNetVisit">
+                          <xs:element minOccurs="0"
+                            name="interventionalTherapySinceLastDigiNetVisit">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Hat eine interventionelle
                                 Therapie seit der letzten DigiNet-Visite stattgefunden?' - Typ:
@@ -28439,7 +28448,8 @@
                                           </xs:restriction>
                                         </xs:simpleType>
                                       </xs:element>
-                                      <xs:element minOccurs="0" name="interventionalTherapyOtherMethodSpecified">
+                                      <xs:element minOccurs="0"
+                                        name="interventionalTherapyOtherMethodSpecified">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Datenfeld: 'Bitte
                                             spezifizieren Sie "Andere"' - Typ: FreeText</xs:documentation>
@@ -28450,7 +28460,8 @@
                                           </xs:restriction>
                                         </xs:simpleType>
                                       </xs:element>
-                                      <xs:element minOccurs="0" name="interventionalTherapyLocalization">
+                                      <xs:element minOccurs="0"
+                                        name="interventionalTherapyLocalization">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Datenfeld: 'Lokalisation'
                                             - Typ: Enumeration</xs:documentation>
@@ -28509,9 +28520,8 @@
                         <xs:sequence>
                           <xs:element minOccurs="0" name="id" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                                Eintrags zum Refenzieren und Reidentifzieren in
-                                zukünftigen Importen</xs:documentation>
+                              <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags
+                                zum Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyAssessmentDate">
@@ -28830,7 +28840,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="secondMalignancyOtherLocalizationSpecified">
+                          <xs:element minOccurs="0"
+                            name="secondMalignancyOtherLocalizationSpecified">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Bitte spezifizieren Sie
                                 "Andere"' - Typ: FreeText</xs:documentation>
@@ -28852,9 +28863,8 @@
                         <xs:sequence>
                           <xs:element minOccurs="0" name="id" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                                Eintrags zum Refenzieren und Reidentifzieren in
-                                zukünftigen Importen</xs:documentation>
+                              <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags
+                                zum Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element minOccurs="0" name="hospitalizationSinceLastDigiNetVisit">
@@ -28919,7 +28929,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="hospitalizationElectiveAdmissionIndication">
+                          <xs:element minOccurs="0"
+                            name="hospitalizationElectiveAdmissionIndication">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Indikation' - Typ:
                                 FreeText</xs:documentation>
@@ -28965,7 +28976,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="hospitalizationElectiveAdmissionOtherReferrerSpecified">
+                          <xs:element minOccurs="0"
+                            name="hospitalizationElectiveAdmissionOtherReferrerSpecified">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Bitte spezifizieren Sie
                                 "Anderer"' - Typ: FreeText</xs:documentation>
@@ -28987,7 +28999,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="hospitalizationElectiveAdmissionDischargeDate">
+                          <xs:element minOccurs="0"
+                            name="hospitalizationElectiveAdmissionDischargeDate">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Datum
                                 Krankenhausentlassung' - Typ: MedicalDate</xs:documentation>
@@ -29023,7 +29036,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="hospitalizationNoElectiveAdmissionOtherTypeSpecified">
+                          <xs:element minOccurs="0"
+                            name="hospitalizationNoElectiveAdmissionOtherTypeSpecified">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Bitte spezifizieren Sie
                                 "Andere"' - Typ: FreeText</xs:documentation>
@@ -29062,7 +29076,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="hospitalizationNoElectiveAdmissionOtherReasonSpecified">
+                          <xs:element minOccurs="0"
+                            name="hospitalizationNoElectiveAdmissionOtherReasonSpecified">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Bitte spezifizieren Sie
                                 die Gründe' - Typ: FreeText</xs:documentation>
@@ -29073,7 +29088,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="hospitalizationNoElectiveAdmissionDuration">
+                          <xs:element minOccurs="0"
+                            name="hospitalizationNoElectiveAdmissionDuration">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Dauer des
                                 Krankenhausaufenthaltes' - Typ: Integer</xs:documentation>
@@ -29084,7 +29100,8 @@
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
-                          <xs:element minOccurs="0" name="hospitalizationNoElectiveAdmissionDischargeDate">
+                          <xs:element minOccurs="0"
+                            name="hospitalizationNoElectiveAdmissionDischargeDate">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Datenfeld: 'Datum
                                 Krankenhausentlassung' - Typ: MedicalDate</xs:documentation>
@@ -29106,9 +29123,8 @@
                         <xs:sequence>
                           <xs:element minOccurs="0" name="id" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                                Eintrags zum Refenzieren und Reidentifzieren in
-                                zukünftigen Importen</xs:documentation>
+                              <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags
+                                zum Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element minOccurs="0" name="surveyDate">
@@ -29186,9 +29202,8 @@
                         <xs:sequence>
                           <xs:element minOccurs="0" name="id" type="xs:string">
                             <xs:annotation>
-                              <xs:documentation xml:lang="de">Interne und eindeutige Id des
-                                Eintrags zum Refenzieren und Reidentifzieren in
-                                zukünftigen Importen</xs:documentation>
+                              <xs:documentation xml:lang="de">Interne und eindeutige Id des Eintrags
+                                zum Refenzieren und Reidentifzieren in zukünftigen Importen</xs:documentation>
                             </xs:annotation>
                           </xs:element>
                           <xs:element minOccurs="0" name="state">
@@ -33570,7 +33585,8 @@
               <!-- 
               <xs:element minOccurs="0" maxOccurs="unbounded" name="digiNetFollowUp">
                 <xs:annotation>
-                  <xs:documentation xml:lang="de">Visite: 'DigiNet Follow Up' - Diginet Visitendaten</xs:documentation>
+                  <xs:documentation xml:lang="de">Visite: 'DigiNet Follow Up' - Diginet
+              Visitendaten</xs:documentation>
                 </xs:annotation>
                 <xs:complexType>
                   <xs:sequence>
