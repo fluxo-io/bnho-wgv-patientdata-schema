@@ -81,6 +81,10 @@
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
                           <xs:pattern value="(\d{4}-\d{2}-\d{2})" />
+                          <!-- Note: "0000-00-00" is valid per this pattern and is intended to act
+                          as a placeholder. When this value is received, the data handler should
+                          interpret it as an instruction to clear or delete any previously stored
+                          values. -->
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
@@ -90,6 +94,14 @@
                       </xs:annotation>
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
+                          <xs:enumeration value="-NA-">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                              <!-- Note: "-NA-" is used as a placeholder. When this value is
+                              received, it should signal the data handler to clear or delete any
+                              previously stored values. -->
+                            </xs:annotation>
+                          </xs:enumeration>
                           <xs:enumeration value="female">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Weiblich</xs:documentation>
@@ -159,6 +171,10 @@
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                       <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2}|\d{4})" />
+                                      <!-- Note: "0000-00-00" is valid per this pattern and is
+                                      intended to act as a placeholder. When this value is received,
+                                      the data handler should interpret it as an instruction to
+                                      clear or delete any previously stored values. -->
                                     </xs:restriction>
                                   </xs:simpleType>
                                 </xs:element>
@@ -169,6 +185,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="firstDiagnosis">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Erstdiagnose</xs:documentation>
@@ -189,6 +213,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="C34.0">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">C34.0 - Hauptbronchus</xs:documentation>
@@ -234,6 +266,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="8140/3">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">8140/3 - Adenokarzinom
@@ -436,6 +476,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="version7">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Version 7</xs:documentation>
@@ -461,6 +509,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="0">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">0</xs:documentation>
@@ -516,6 +572,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="0">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">0</xs:documentation>
@@ -606,6 +670,14 @@
                       </xs:annotation>
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
+                          <xs:enumeration value="-NA-">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                              <!-- Note: "-NA-" is used as a placeholder. When this value is
+                              received, it should signal the data handler to clear or delete any
+                              previously stored values. -->
+                            </xs:annotation>
+                          </xs:enumeration>
                           <xs:enumeration value="yes">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -632,6 +704,10 @@
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
                           <xs:pattern value="(|\d{4}-\d{2}-\d{2})" />
+                          <!-- Note: "0000-00-00" is valid per this pattern and is
+                          intended to act as a placeholder. When this value is received,
+                          the data handler should interpret it as an instruction to
+                          clear or delete any previously stored values. -->
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
@@ -642,6 +718,14 @@
                       </xs:annotation>
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
+                          <xs:enumeration value="-NA-">
+                            <xs:annotation>
+                              <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                              <!-- Note: "-NA-" is used as a placeholder. When this value is
+                              received, it should signal the data handler to clear or delete any
+                              previously stored values. -->
+                            </xs:annotation>
+                          </xs:enumeration>
                           <xs:enumeration value="Arztbrief">
                             <xs:annotation>
                               <xs:documentation xml:lang="de">Arztbrief</xs:documentation>
@@ -723,6 +807,10 @@
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
                                       <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2}|\d{4})" />
+                                      <!-- Note: "0000-00-00" is valid per this pattern and is
+                                      intended to act as a placeholder. When this value is received,
+                                      the data handler should interpret it as an instruction to
+                                      clear or delete any previously stored values. -->
                                     </xs:restriction>
                                   </xs:simpleType>
                                 </xs:element>
@@ -733,6 +821,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="L">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">lebt</xs:documentation>
@@ -782,8 +878,8 @@
                       <xs:annotation>
                         <xs:documentation xml:lang="de">Instrument: 'Krankenkasse'</xs:documentation>
                       </xs:annotation>
-                      <!-- Wir würden gerne die IKNR Nuummer statt einem Krankenkassenstring senden.
-                      Ist dies möglich? -->
+                      <!-- TODO: We would like to send the IKNR number instead of a health insurance
+                      name. Is this possible? -->
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element minOccurs="0" name="name">
@@ -793,6 +889,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="Allianz Private Krankenversicherung">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Allianz Private
@@ -1631,6 +1735,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="voll">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Vollversichert</xs:documentation>
@@ -1650,7 +1762,13 @@
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="inSuite.name" type="xs:string" />
+                          <!-- Note: If this element is left empty (i.e., ""), it indicates that any
+                          previously transmitted data for this field should be considered for
+                          deletion or clearing. -->
                           <xs:element minOccurs="0" name="inSuite.IKNR" type="xs:string" />
+                          <!-- Note: If this element is left empty (i.e., ""), it indicates that any
+                          previously transmitted data for this field should be considered for
+                          deletion or clearing. -->
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -1674,6 +1792,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="LA18979-7">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Raucher</xs:documentation>
@@ -1706,6 +1832,9 @@
                                     <xs:restriction base="xs:integer">
                                       <xs:maxInclusive value="99" />
                                     </xs:restriction>
+                                    <!-- Note: If this element is 0, it indicates that any
+                                    previously transmitted data for this field should be considered
+                                    for deletion or clearing. -->
                                   </xs:simpleType>
                                 </xs:element>
                                 <xs:element minOccurs="0" name="packYears">
@@ -1743,6 +1872,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="LA9622-7">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">ECOG 0 - normale,
@@ -1847,6 +1984,15 @@
                                               </xs:annotation>
                                               <xs:simpleType>
                                                 <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="-NA-">
+                                                    <xs:annotation>
+                                                      <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                      <!-- Note: "-NA-" is used as a placeholder.
+                                                      When this value is received, it should signal
+                                                      the data handler to clear or delete any
+                                                      previously stored values. -->
+                                                    </xs:annotation>
+                                                  </xs:enumeration>
                                                   <xs:enumeration value="yes">
                                                     <xs:annotation>
                                                       <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -1867,6 +2013,15 @@
                                               </xs:annotation>
                                               <xs:simpleType>
                                                 <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="-NA-">
+                                                    <xs:annotation>
+                                                      <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                      <!-- Note: "-NA-" is used as a placeholder.
+                                                      When this value is received, it should signal
+                                                      the data handler to clear or delete any
+                                                      previously stored values. -->
+                                                    </xs:annotation>
+                                                  </xs:enumeration>
                                                   <xs:enumeration value="yes">
                                                     <xs:annotation>
                                                       <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -1897,6 +2052,15 @@
                                               </xs:annotation>
                                               <xs:simpleType>
                                                 <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="-NA-">
+                                                    <xs:annotation>
+                                                      <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                      <!-- Note: "-NA-" is used as a placeholder.
+                                                      When this value is received, it should signal
+                                                      the data handler to clear or delete any
+                                                      previously stored values. -->
+                                                    </xs:annotation>
+                                                  </xs:enumeration>
                                                   <xs:enumeration value="version7">
                                                     <xs:annotation>
                                                       <xs:documentation xml:lang="de">Version 7</xs:documentation>
@@ -1927,6 +2091,15 @@
                                               </xs:annotation>
                                               <xs:simpleType>
                                                 <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="-NA-">
+                                                    <xs:annotation>
+                                                      <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                      <!-- Note: "-NA-" is used as a placeholder.
+                                                      When this value is received, it should signal
+                                                      the data handler to clear or delete any
+                                                      previously stored values. -->
+                                                    </xs:annotation>
+                                                  </xs:enumeration>
                                                   <xs:enumeration value="r">
                                                     <xs:annotation>
                                                       <xs:documentation xml:lang="de">r</xs:documentation>
@@ -1955,6 +2128,16 @@
                                                     </xs:annotation>
                                                     <xs:simpleType>
                                                       <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="-NA-">
+                                                          <xs:annotation>
+                                                            <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                            <!-- Note: "-NA-" is used as a
+                                                            placeholder. When this value is
+                                                            received, it should signal the data
+                                                            handler to clear or delete any
+                                                            previously stored values. -->
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
                                                         <xs:enumeration value="TX">
                                                           <xs:annotation>
                                                             <xs:documentation xml:lang="de">TX</xs:documentation>
@@ -2025,6 +2208,16 @@
                                                     </xs:annotation>
                                                     <xs:simpleType>
                                                       <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="-NA-">
+                                                          <xs:annotation>
+                                                            <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                            <!-- Note: "-NA-" is used as a
+                                                            placeholder. When this value is
+                                                            received, it should signal the data
+                                                            handler to clear or delete any
+                                                            previously stored values. -->
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
                                                         <xs:enumeration value="c">
                                                           <xs:annotation>
                                                             <xs:documentation xml:lang="de">c -
@@ -2053,6 +2246,16 @@
                                                     </xs:annotation>
                                                     <xs:simpleType>
                                                       <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="-NA-">
+                                                          <xs:annotation>
+                                                            <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                            <!-- Note: "-NA-" is used as a
+                                                            placeholder. When this value is
+                                                            received, it should signal the data
+                                                            handler to clear or delete any
+                                                            previously stored values. -->
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
                                                         <xs:enumeration value="m">
                                                           <xs:annotation>
                                                             <xs:documentation xml:lang="de">m -
@@ -2092,6 +2295,16 @@
                                                     </xs:annotation>
                                                     <xs:simpleType>
                                                       <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="-NA-">
+                                                          <xs:annotation>
+                                                            <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                            <!-- Note: "-NA-" is used as a
+                                                            placeholder. When this value is
+                                                            received, it should signal the data
+                                                            handler to clear or delete any
+                                                            previously stored values. -->
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
                                                         <xs:enumeration value="NX">
                                                           <xs:annotation>
                                                             <xs:documentation xml:lang="de">NX</xs:documentation>
@@ -2127,6 +2340,16 @@
                                                     </xs:annotation>
                                                     <xs:simpleType>
                                                       <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="-NA-">
+                                                          <xs:annotation>
+                                                            <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                            <!-- Note: "-NA-" is used as a
+                                                            placeholder. When this value is
+                                                            received, it should signal the data
+                                                            handler to clear or delete any
+                                                            previously stored values. -->
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
                                                         <xs:enumeration value="c">
                                                           <xs:annotation>
                                                             <xs:documentation xml:lang="de">c -
@@ -2166,6 +2389,16 @@
                                                     </xs:annotation>
                                                     <xs:simpleType>
                                                       <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="-NA-">
+                                                          <xs:annotation>
+                                                            <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                            <!-- Note: "-NA-" is used as a
+                                                            placeholder. When this value is
+                                                            received, it should signal the data
+                                                            handler to clear or delete any
+                                                            previously stored values. -->
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
                                                         <xs:enumeration value="MX">
                                                           <xs:annotation>
                                                             <xs:documentation xml:lang="de">MX</xs:documentation>
@@ -2207,6 +2440,16 @@
                                                     </xs:annotation>
                                                     <xs:simpleType>
                                                       <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="-NA-">
+                                                          <xs:annotation>
+                                                            <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                            <!-- Note: "-NA-" is used as a
+                                                            placeholder. When this value is
+                                                            received, it should signal the data
+                                                            handler to clear or delete any
+                                                            previously stored values. -->
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
                                                         <xs:enumeration value="bones">
                                                           <xs:annotation>
                                                             <xs:documentation>Knochen</xs:documentation>
@@ -2251,6 +2494,10 @@
                                                       <xs:restriction base="xs:string">
                                                         <xs:maxLength value="200" />
                                                       </xs:restriction>
+                                                      <!-- Note: If this element is left empty
+                                                      (i.e., ""), it indicates that any previously
+                                                      transmitted data for this field should be
+                                                      considered for deletion or clearing. -->
                                                     </xs:simpleType>
                                                   </xs:element>
                                                   <xs:element minOccurs="0" name="metastasesPrefix">
@@ -2260,6 +2507,16 @@
                                                     </xs:annotation>
                                                     <xs:simpleType>
                                                       <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="-NA-">
+                                                          <xs:annotation>
+                                                            <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                            <!-- Note: "-NA-" is used as a
+                                                            placeholder. When this value is
+                                                            received, it should signal the data
+                                                            handler to clear or delete any
+                                                            previously stored values. -->
+                                                          </xs:annotation>
+                                                        </xs:enumeration>
                                                         <xs:enumeration value="c">
                                                           <xs:annotation>
                                                             <xs:documentation xml:lang="de">c -
@@ -2369,6 +2626,15 @@
                                               </xs:annotation>
                                               <xs:simpleType>
                                                 <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="-NA-">
+                                                    <xs:annotation>
+                                                      <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                      <!-- Note: "-NA-" is used as a placeholder.
+                                                      When this value is received, it should signal
+                                                      the data handler to clear or delete any
+                                                      previously stored values. -->
+                                                    </xs:annotation>
+                                                  </xs:enumeration>
                                                   <xs:enumeration value="8140/3">
                                                     <xs:annotation>
                                                       <xs:documentation xml:lang="de">8140/3 -
@@ -2574,6 +2840,15 @@
                                               </xs:annotation>
                                               <xs:simpleType>
                                                 <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="-NA-">
+                                                    <xs:annotation>
+                                                      <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                      <!-- Note: "-NA-" is used as a placeholder.
+                                                      When this value is received, it should signal
+                                                      the data handler to clear or delete any
+                                                      previously stored values. -->
+                                                    </xs:annotation>
+                                                  </xs:enumeration>
                                                   <xs:enumeration value="C34.0">
                                                     <xs:annotation>
                                                       <xs:documentation xml:lang="de">C34.0 -
@@ -2782,6 +3057,15 @@
                                               </xs:annotation>
                                               <xs:simpleType>
                                                 <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="-NA-">
+                                                    <xs:annotation>
+                                                      <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                      <!-- Note: "-NA-" is used as a placeholder.
+                                                      When this value is received, it should signal
+                                                      the data handler to clear or delete any
+                                                      previously stored values. -->
+                                                    </xs:annotation>
+                                                  </xs:enumeration>
                                                   <xs:enumeration value="G0">
                                                     <xs:annotation>
                                                       <xs:documentation xml:lang="de">G0 - Grading
@@ -2855,6 +3139,9 @@
                                                   <xs:minInclusive value="0" />
                                                   <xs:maxInclusive value="100" />
                                                 </xs:restriction>
+                                                <!-- Note: If this element is 0, it indicates that
+                                                any previously transmitted data for this field
+                                                should be considered for deletion or clearing. -->
                                               </xs:simpleType>
                                             </xs:element>
                                             <xs:element minOccurs="0" name="growthPatternAcinary">
@@ -2868,6 +3155,9 @@
                                                   <xs:minInclusive value="0" />
                                                   <xs:maxInclusive value="100" />
                                                 </xs:restriction>
+                                                <!-- Note: If this element is 0, it indicates that
+                                                any previously transmitted data for this field
+                                                should be considered for deletion or clearing. -->
                                               </xs:simpleType>
                                             </xs:element>
                                             <xs:element minOccurs="0" name="growthPatternPapillary">
@@ -2881,6 +3171,9 @@
                                                   <xs:minInclusive value="0" />
                                                   <xs:maxInclusive value="100" />
                                                 </xs:restriction>
+                                                <!-- Note: If this element is 0, it indicates that
+                                                any previously transmitted data for this field
+                                                should be considered for deletion or clearing. -->
                                               </xs:simpleType>
                                             </xs:element>
                                             <xs:element minOccurs="0"
@@ -2895,6 +3188,9 @@
                                                   <xs:minInclusive value="0" />
                                                   <xs:maxInclusive value="100" />
                                                 </xs:restriction>
+                                                <!-- Note: If this element is 0, it indicates that
+                                                any previously transmitted data for this field
+                                                should be considered for deletion or clearing. -->
                                               </xs:simpleType>
                                             </xs:element>
                                             <xs:element minOccurs="0" name="growthPatternSolid">
@@ -2908,6 +3204,9 @@
                                                   <xs:minInclusive value="0" />
                                                   <xs:maxInclusive value="100" />
                                                 </xs:restriction>
+                                                <!-- Note: If this element is 0, it indicates that
+                                                any previously transmitted data for this field
+                                                should be considered for deletion or clearing. -->
                                               </xs:simpleType>
                                             </xs:element>
                                             <xs:element minOccurs="0"
@@ -2921,6 +3220,9 @@
                                                   <xs:minInclusive value="0" />
                                                   <xs:maxInclusive value="100" />
                                                 </xs:restriction>
+                                                <!-- Note: If this element is 0, it indicates that
+                                                any previously transmitted data for this field
+                                                should be considered for deletion or clearing. -->
                                               </xs:simpleType>
                                             </xs:element>
                                           </xs:sequence>
@@ -2981,6 +3283,15 @@
                                         </xs:annotation>
                                         <xs:simpleType>
                                           <xs:restriction base="xs:string">
+                                            <xs:enumeration value="-NA-">
+                                              <xs:annotation>
+                                                <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                <!-- Note: "-NA-" is used as a placeholder. When
+                                                this value is received, it should signal the data
+                                                handler to clear or delete any previously stored
+                                                values. -->
+                                              </xs:annotation>
+                                            </xs:enumeration>
                                             <xs:enumeration value="yes">
                                               <xs:annotation>
                                                 <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -3048,6 +3359,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -3068,6 +3383,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -3086,6 +3405,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="yes">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -3108,6 +3435,9 @@
                                     <xs:restriction base="xs:integer">
                                       <xs:maxInclusive value="99" />
                                     </xs:restriction>
+                                    <!-- Note: If this element is 0, it indicates that any
+                                    previously transmitted data for this field should be considered
+                                    for deletion or clearing. -->
                                   </xs:simpleType>
                                 </xs:element>
                                 <xs:element minOccurs="0" name="cancerLocalization">
@@ -3117,6 +3447,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="mamma">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Mamma</xs:documentation>
@@ -3159,6 +3497,9 @@
                                     <xs:restriction base="xs:string">
                                       <xs:maxLength value="200" />
                                     </xs:restriction>
+                                    <!-- Note: If this element is left empty (i.e., ""), it
+                                    indicates that any previously transmitted data for this field
+                                    should be considered for deletion or clearing. -->
                                   </xs:simpleType>
                                 </xs:element>
                                 <xs:element minOccurs="0" name="cancerSystemicTherapy">
@@ -3168,6 +3509,14 @@
                                   </xs:annotation>
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="yes">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -3191,6 +3540,9 @@
                                     <xs:restriction base="xs:integer">
                                       <xs:maxInclusive value="99" />
                                     </xs:restriction>
+                                    <!-- Note: If this element is 0, it indicates that any
+                                    previously transmitted data for this field should be considered
+                                    for deletion or clearing. -->
                                   </xs:simpleType>
                                 </xs:element>
                               </xs:sequence>
@@ -3212,6 +3564,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -3233,6 +3593,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -3243,6 +3607,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="undefinedEnum">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">undefined enum</xs:documentation>
@@ -3888,6 +4260,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -3908,6 +4288,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -3930,6 +4318,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="interventionalTherapySinceStudyInclusion">
@@ -3939,6 +4330,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -3959,6 +4358,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="lung">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Lunge</xs:documentation>
@@ -3991,6 +4398,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="methodType">
@@ -4000,6 +4410,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="ablation">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ablation</xs:documentation>
@@ -4032,6 +4450,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="bestSupportiveCare">
@@ -4041,6 +4462,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -4071,6 +4500,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -4080,6 +4513,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="LA9622-7">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">ECOG 0 - normale,
@@ -4142,6 +4583,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="alive">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Lebend</xs:documentation>
@@ -4163,6 +4612,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -4173,6 +4626,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -4200,6 +4661,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="2000" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="height">
@@ -4211,6 +4675,10 @@
                               <xs:restriction base="xs:integer">
                                 <xs:maxInclusive value="999" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
+
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="weight">
@@ -4262,6 +4730,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -4283,6 +4759,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -4314,6 +4798,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -4349,6 +4837,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -4369,6 +4865,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="firstTherapyInitiationAfterDiagnosis">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Erstmaliger Beginn einer
@@ -4403,6 +4907,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -4452,6 +4964,9 @@
                                           <xs:restriction base="xs:string">
                                             <xs:maxLength value="200" />
                                           </xs:restriction>
+                                          <!-- Note: If this element is left empty (i.e., ""), it
+                                          indicates that any previously transmitted data for this
+                                          field should be considered for deletion or clearing. -->
                                         </xs:simpleType>
                                       </xs:element>
                                       <xs:element minOccurs="0" name="partiallyNotImplementedReason">
@@ -4461,6 +4976,15 @@
                                         </xs:annotation>
                                         <xs:simpleType>
                                           <xs:restriction base="xs:string">
+                                            <xs:enumeration value="-NA-">
+                                              <xs:annotation>
+                                                <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                <!-- Note: "-NA-" is used as a placeholder. When
+                                                this value is received, it should signal the data
+                                                handler to clear or delete any previously stored
+                                                values. -->
+                                              </xs:annotation>
+                                            </xs:enumeration>
                                             <xs:enumeration value="concomitantDiseases">
                                               <xs:annotation>
                                                 <xs:documentation xml:lang="de">Begleiterkrankungen</xs:documentation>
@@ -4551,6 +5075,9 @@
                                           <xs:restriction base="xs:string">
                                             <xs:maxLength value="200" />
                                           </xs:restriction>
+                                          <!-- Note: If this element is left empty (i.e., ""), it
+                                          indicates that any previously transmitted data for this
+                                          field should be considered for deletion or clearing. -->
                                         </xs:simpleType>
                                       </xs:element>
                                       <xs:element minOccurs="0" name="partiallyNotImplementedNotes">
@@ -4562,6 +5089,9 @@
                                           <xs:restriction base="xs:string">
                                             <xs:maxLength value="2000" />
                                           </xs:restriction>
+                                          <!-- Note: If this element is left empty (i.e., ""), it
+                                          indicates that any previously transmitted data for this
+                                          field should be considered for deletion or clearing. -->
                                         </xs:simpleType>
                                       </xs:element>
                                     </xs:sequence>
@@ -4580,6 +5110,14 @@
                                 <xs:element minOccurs="0" maxOccurs="unbounded" name="value">
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="concomitantDiseases">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Begleiterkrankungen</xs:documentation>
@@ -4668,6 +5206,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="notImplementedNotes">
@@ -4679,6 +5220,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="2000" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyInitiationStartDate">
@@ -4689,6 +5233,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -4699,6 +5247,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="adagrasib">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Adagrasib</xs:documentation>
@@ -5330,6 +5886,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyInitiationOffLabelTreatment">
@@ -5339,6 +5898,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -5359,6 +5926,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -5381,6 +5956,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0"
@@ -5391,6 +5969,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -5412,6 +5998,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="atezolizumab">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Atezolizumab</xs:documentation>
@@ -5525,6 +6119,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyStartDate">
@@ -5535,6 +6132,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -5545,6 +6146,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="adagrasib">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Adagrasib</xs:documentation>
@@ -6176,6 +6785,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyStartReason">
@@ -6185,6 +6797,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="diseaseProgress">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Progress der Erkrankung</xs:documentation>
@@ -6213,6 +6833,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyStartOffLabelTreatment">
@@ -6222,6 +6845,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -6242,6 +6873,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -6264,6 +6903,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyChangeEndDate">
@@ -6274,6 +6916,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -6284,6 +6930,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="progress">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Progress</xs:documentation>
@@ -6321,6 +6975,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -6343,6 +7005,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyChangeStartDate">
@@ -6353,6 +7018,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -6363,6 +7032,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="adagrasib">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Adagrasib</xs:documentation>
@@ -6994,6 +7671,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyChangeOffLabelTreatment">
@@ -7003,6 +7683,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -7023,6 +7711,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -7045,6 +7741,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyChangeGoal">
@@ -7054,6 +7753,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="curativeTherapyGoal">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Kuratives Therapieziel</xs:documentation>
@@ -7086,6 +7793,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyEndDate">
@@ -7096,6 +7806,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -7109,6 +7823,14 @@
                                 <xs:element minOccurs="0" maxOccurs="unbounded" name="value">
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="patientWish">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Patientenwunsch</xs:documentation>
@@ -7156,6 +7878,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0"
@@ -7167,6 +7892,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -7208,6 +7941,15 @@
                                         </xs:annotation>
                                         <xs:simpleType>
                                           <xs:restriction base="xs:string">
+                                            <xs:enumeration value="-NA-">
+                                              <xs:annotation>
+                                                <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                <!-- Note: "-NA-" is used as a placeholder. When
+                                                this value is received, it should signal the data
+                                                handler to clear or delete any previously stored
+                                                values. -->
+                                              </xs:annotation>
+                                            </xs:enumeration>
                                             <xs:enumeration value="ablation">
                                               <xs:annotation>
                                                 <xs:documentation xml:lang="de">Ablation</xs:documentation>
@@ -7241,6 +7983,9 @@
                                           <xs:restriction base="xs:string">
                                             <xs:maxLength value="200" />
                                           </xs:restriction>
+                                          <!-- Note: If this element is left empty (i.e., ""), it
+                                          indicates that any previously transmitted data for this
+                                          field should be considered for deletion or clearing. -->
                                         </xs:simpleType>
                                       </xs:element>
                                       <xs:element minOccurs="0"
@@ -7251,6 +7996,15 @@
                                         </xs:annotation>
                                         <xs:simpleType>
                                           <xs:restriction base="xs:string">
+                                            <xs:enumeration value="-NA-">
+                                              <xs:annotation>
+                                                <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                                <!-- Note: "-NA-" is used as a placeholder. When
+                                                this value is received, it should signal the data
+                                                handler to clear or delete any previously stored
+                                                values. -->
+                                              </xs:annotation>
+                                            </xs:enumeration>
                                             <xs:enumeration value="lung">
                                               <xs:annotation>
                                                 <xs:documentation xml:lang="de">Lunge</xs:documentation>
@@ -7284,6 +8038,9 @@
                                           <xs:restriction base="xs:string">
                                             <xs:maxLength value="200" />
                                           </xs:restriction>
+                                          <!-- Note: If this element is left empty (i.e., ""), it
+                                          indicates that any previously transmitted data for this
+                                          field should be considered for deletion or clearing. -->
                                         </xs:simpleType>
                                       </xs:element>
                                     </xs:sequence>
@@ -7315,6 +8072,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2}|\d{4}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -7325,6 +8086,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="completeResponse">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Complete Response (CR)</xs:documentation>
@@ -7363,6 +8132,14 @@
                                 <xs:element minOccurs="0" maxOccurs="unbounded" name="value">
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="imaging">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Bildgebung</xs:documentation>
@@ -7412,6 +8189,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyImagingDate">
@@ -7432,6 +8212,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="CT">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">CT</xs:documentation>
@@ -7464,6 +8252,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyImagingLocalization">
@@ -7476,6 +8267,14 @@
                                 <xs:element minOccurs="0" maxOccurs="unbounded" name="value">
                                   <xs:simpleType>
                                     <xs:restriction base="xs:string">
+                                      <xs:enumeration value="-NA-">
+                                        <xs:annotation>
+                                          <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                          <!-- Note: "-NA-" is used as a placeholder. When this
+                                          value is received, it should signal the data handler to
+                                          clear or delete any previously stored values. -->
+                                        </xs:annotation>
+                                      </xs:enumeration>
                                       <xs:enumeration value="head">
                                         <xs:annotation>
                                           <xs:documentation xml:lang="de">Kopf</xs:documentation>
@@ -7520,6 +8319,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="therapyBiopsySamplingSite">
@@ -7529,6 +8331,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="lungs">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Lunge</xs:documentation>
@@ -7561,6 +8371,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="secondMalignancySinceLastDigiNetVisit">
@@ -7570,6 +8383,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -7590,6 +8411,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="mamma">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Mamma</xs:documentation>
@@ -7633,6 +8462,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                         </xs:sequence>
@@ -7657,6 +8489,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -7690,6 +8530,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="hospitalizationElectiveAdmission">
@@ -7699,6 +8542,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -7722,6 +8573,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="hospitalizationElectiveAdmissionReferrer">
@@ -7731,6 +8585,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="familyDoctor">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Hausarzt</xs:documentation>
@@ -7769,6 +8631,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="hospitalizationElectiveAdmissionDuration">
@@ -7780,6 +8645,10 @@
                               <xs:restriction base="xs:integer">
                                 <xs:maxInclusive value="999" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
+
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0"
@@ -7801,6 +8670,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="emergencyDoctorOrRescueService">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Notarzt / Rettungsdienst</xs:documentation>
@@ -7829,6 +8706,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="hospitalizationNoElectiveAdmissionReason">
@@ -7838,6 +8718,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="sideEffects">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">therapieassoziierte Gründe
@@ -7869,6 +8757,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="200" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0"
@@ -7881,6 +8772,10 @@
                               <xs:restriction base="xs:integer">
                                 <xs:maxInclusive value="999" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
+
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0"
@@ -7927,6 +8822,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="LA9622-7">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">ECOG 0 - normale,
@@ -7996,6 +8899,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -8017,6 +8928,10 @@
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
                                 <xs:pattern value="(\d{4}-\d{2}-\d{2})" />
+                                <!-- Note: "0000-00-00" is valid per this pattern and is intended to
+                                act as a placeholder. When this value is received, the data handler
+                                should interpret it as an instruction to clear or delete any
+                                previously stored values. -->
                               </xs:restriction>
                             </xs:simpleType>
                           </xs:element>
@@ -8027,6 +8942,14 @@
                             </xs:annotation>
                             <xs:simpleType>
                               <xs:restriction base="xs:string">
+                                <xs:enumeration value="-NA-">
+                                  <xs:annotation>
+                                    <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                                    <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+                                  </xs:annotation>
+                                </xs:enumeration>
                                 <xs:enumeration value="yes">
                                   <xs:annotation>
                                     <xs:documentation xml:lang="de">Ja</xs:documentation>
@@ -8054,6 +8977,9 @@
                               <xs:restriction base="xs:string">
                                 <xs:maxLength value="2000" />
                               </xs:restriction>
+                              <!-- Note: If this element is left empty (i.e., ""), it indicates that
+                              any previously transmitted data for this field should be considered
+                              for deletion or clearing. -->
                             </xs:simpleType>
                           </xs:element>
                           <xs:element minOccurs="0" name="weight">
