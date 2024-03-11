@@ -1,0 +1,47 @@
+<tns:data xmlns:tns="http://nngm.medicalsyn.com">
+  <identifying-data>
+    <patient>
+      <id>65e9954b7c84ecb1dbedabcf</id>
+      <vorname>Jana</vorname>
+      <nachname>Test-April</nachname>
+      <geburtsname />
+      <geburtstag>10</geburtstag>
+      <geburtsmonat>10</geburtsmonat>
+      <geburtsjahr>1987</geburtsjahr>
+      <versicherungsnummer>A000000090</versicherungsnummer>
+      <adresse.plz>10785</adresse.plz>
+      <adresse.stadt>Berlin</adresse.stadt>
+      <adresse.strasse>Talstraße </adresse.strasse>
+    </patient>
+  </identifying-data>
+  <medical-data>
+    <sender>
+      <praxisname>Testdatensafe DigiNet BNHO - WINHO GmbH</praxisname>
+      <bsnr>120100700</bsnr>
+      <behandlername>Jana Becker</behandlername>
+      <behandlerid>0621</behandlerid>
+      <studyname>DigiNet</studyname>
+      <studyid />
+      <systemid>cn7024173t</systemid>
+    </sender>
+    <patient>
+      <birthdate>1987-10-10</birthdate>
+      <gender>female</gender>
+    </patient>
+    <digiNetPlannedVisit>
+      <diginet-visit-id>-NA-</diginet-visit-id>
+      <visit_digiNetVitalStatus>
+        <id>65eef568b1e2935e7c2428f6</id>
+        <state>-NA-</state>
+        <deathDate>0000-00-00</deathDate>
+        <deathTumorRelated>-NA-</deathTumorRelated>
+        <deathReason>-NA-</deathReason>
+        <weight>0</weight>
+      </visit_digiNetVitalStatus>
+      <digiNetEpro>
+        <ePROFilledSinceLastDigiNetVisit>-NA-</ePROFilledSinceLastDigiNetVisit>
+        <ePROResultsHadTherapeuticConsequence>-NA-</ePROResultsHadTherapeuticConsequence>
+      </digiNetEpro>
+    </digiNetPlannedVisit>
+  </medical-data>
+</tns:data>
