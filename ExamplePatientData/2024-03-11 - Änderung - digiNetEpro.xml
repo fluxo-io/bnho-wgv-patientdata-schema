@@ -1,0 +1,77 @@
+...
+<xs:element minOccurs="0" name="digiNetEpro">
+  <xs:annotation>
+    <xs:documentation xml:lang="de">Instrument: 'ePRO'</xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="ePROFilledSinceLastDigiNetVisit">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">Datenfeld: 'Hat der Patient seit der
+            letzten DigiNet-Visite PROs ausgefüllt?' - Typ: Enumeration</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="-NA-">
+              <xs:annotation>
+                <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="yes">
+              <xs:annotation>
+                <xs:documentation xml:lang="de">Ja</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="no">
+              <xs:annotation>
+                <xs:documentation xml:lang="de">Nein</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="unknown">
+              <xs:annotation>
+                <xs:documentation xml:lang="de">Unbekannt</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="ePROResultsHadTherapeuticConsequence">
+        <xs:annotation>
+          <xs:documentation xml:lang="de">Datenfeld: 'Hatten die Ergebnisse der
+            PROs eine therapeutische Konsequenz?' - Typ: Enumeration</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="-NA-">
+              <xs:annotation>
+                <xs:documentation xml:lang="de">-NA-</xs:documentation>
+                <!-- Note: "-NA-" is used as a placeholder. When this value is
+                                    received, it should signal the data handler to clear or delete
+                                    any previously stored values. -->
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="yes">
+              <xs:annotation>
+                <xs:documentation xml:lang="de">Ja</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="no">
+              <xs:annotation>
+                <xs:documentation xml:lang="de">Nein</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="unknown">
+              <xs:annotation>
+                <xs:documentation xml:lang="de">Unbekannt</xs:documentation>
+              </xs:annotation>
+            </xs:enumeration>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+...
